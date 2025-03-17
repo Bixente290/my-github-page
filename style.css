@@ -1,67 +1,184 @@
-body{
-    font-family: Arial, sans-serif;
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
-header{
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #495057, #343a40);
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
-header h1{
+
+header h1 {
     margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
-nav a{
-    color:white;
+
+header:hover {
+    background: linear-gradient(90deg, #343a40, #495057);
+}
+
+/* Navigation Styles */
+nav.navbar {
+    background-color: #495057;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav.navbar ul li {
+    margin: 0 15px;
+}
+
+nav.navbar ul li a {
+    color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, transform 0.3s ease;
 }
-nav a:hover{
-    text-decoration: underline;
+
+nav.navbar ul li a:hover {
+    background-color: white;
+    color: #495057;
+    border-radius: 5px;
+    transform: scale(1.1);
+    border-bottom: #495057 2px solid;
 }
-main{
+
+/* Main Content Styles */
+main {
     padding: 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out;
 }
-main img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
+
+main h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
-footer{
-    background-color: #333;
-    color: white;
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* List Styles */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Section Box Styles */
+.about, .education, .skills, .contact, .description {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Section Headers */
+.about h2, .education h2, .skills h2, .contact h2 {
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    text-decoration: underline;
+    font-size: 1.8em;
+}
+
+/* Images */
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
-p{
-    font-size: 1.1em;
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
-a{
-    color: #4CAF50;
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
     text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
 }
 
-a:hover{
-    text-decoration: underline;
+footer ul li a:hover {
+    background-color: #6c757d;
+    border-radius: 5px;
 }
 
-img{
-    text-decoration: underline;
+/* Button Styles (Optional) */
+button {
+    background-color: #495057;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-img{
-    border: 5px solid #4CAF50;
-    border-radius: 10px;
+button:hover {
+    background-color: #343a40;
+    transform: scale(1.1);
 }
-
